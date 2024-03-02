@@ -1,7 +1,7 @@
 const carCanvas = document.getElementById("carCanvas");
 carCanvas.width = 200;
 const networkCanvas = document.getElementById("networkCanvas");
-networkCanvas.width = 300;
+networkCanvas.width = 500;
 
 const carCtx = carCanvas.getContext("2d");
 const networkCtx = networkCanvas.getContext("2d");
@@ -14,7 +14,7 @@ const traffic=[
 
 animate();
 
-function animate() {
+function animate(time) {
   for(let i=0; i<traffic.length; i++){
     traffic[i].update(road.borders, []);
   }
@@ -33,6 +33,7 @@ function animate() {
   car.draw(carCtx, "blue");
   carCtx.restore();
 
+  networkCtx.lineDashOffset=-time/50;
   Visualizer.drawNetwork(networkCtx, car.brain);
   requestAnimationFrame(animate);
 }
