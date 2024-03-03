@@ -139,10 +139,15 @@ class Car{
   }
 
   draw(ctx,drawSensor=false){
+
+    if(this.sensor && drawSensor){
+      this.sensor.draw(ctx);
+    }
+
     // if(this.damaged){
     //   ctx.fillStyle="gray";
     // }else{
-    //   ctx.fillStyle=color;
+    //   ctx.fillStyle="blue";
     // }
     // ctx.beginPath();
     // ctx.moveTo(this.polygon[0].x,this.polygon[0].y);
@@ -150,9 +155,6 @@ class Car{
     //   ctx.lineTo(this.polygon[i].x,this.polygon[i].y);
     // }
     // ctx.fill();
-    if(this.sensor && drawSensor){
-      this.sensor.draw(ctx);
-    }
 
     ctx.save();
     ctx.translate(this.x,this.y);
