@@ -18,7 +18,7 @@ if(localStorage.getItem("bestBrain")){
       localStorage.getItem("bestBrain")
     );
     if(i!=0){
-      NeuralNetwork.mutate(cars[i].brain,0.06);
+      NeuralNetwork.mutate(cars[i].brain,0.05);
     }
   }
 }
@@ -39,15 +39,15 @@ const traffic=[
   new Car(road.getLaneCenter(1), -1700,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(0), -1900,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(2), -1900,30,50, "DUMMY", 2,getRandomColor()),
-  new Car(road.getLaneCenter(0), -2200,30,50, "DUMMY", 2,getRandomColor()),
-  new Car(road.getLaneCenter(1), -2200,30,50, "DUMMY", 2,getRandomColor()),
+  new Car(road.getLaneCenter(0), -2100,30,50, "DUMMY", 2,getRandomColor()),
+  new Car(road.getLaneCenter(1), -2100,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(1), -2500,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(2), -2500,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(1), -2800,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(0), -2800,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(2), -3000,30,50, "DUMMY", 2,getRandomColor()),
-  new Car(road.getLaneCenter(1), -3250,30,50, "DUMMY", 2,getRandomColor()),
-  new Car(road.getLaneCenter(1), -3200,30,50, "DUMMY", 2.3,getRandomColor()),
+  new Car(road.getLaneCenter(1), -3050,30,50, "DUMMY", 2,getRandomColor()),
+  new Car(road.getLaneCenter(1), -1800,30,50, "DUMMY", 2.3,getRandomColor()),
   new Car(road.getLaneCenter(1), -3450,30,50, "DUMMY", 2,getRandomColor()),
   new Car(road.getLaneCenter(0), -3350,30,50, "DUMMY", 2,getRandomColor()),
 
